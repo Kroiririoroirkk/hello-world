@@ -37,18 +37,16 @@
         if (cookie !== null) {
           $("body").eq(0).html(`<p>You entered ${cookie}!</p>`);
         }
+        alert("I was called!");
       }
       function onSubmit() {
         setCookie("string", document.getElementById("string").getAttribute("value"), 7);
         changeBody();
         alert("I was clicked!");
       }
-      $(document).ready(function(){
-        changeBody();
-      });
     </script>
   </head>
-  <body>
+  <body onload="changeBody()">
     <p>Enter something in, I guess.</p>
     <form id="form" name="field">
       <input id="string" type="text" name="string" value="Hello World!"><br>
