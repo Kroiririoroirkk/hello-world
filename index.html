@@ -39,7 +39,7 @@
         }
         alert("I was called!");
       }
-      function onSubmit() {
+      function submit() {
         setCookie("string", document.getElementById("string").getAttribute("value"), 7);
         changeBody();
         alert("I was clicked!");
@@ -50,7 +50,7 @@
     <p>Enter something in, I guess.</p>
     <form id="form" name="field">
       <input id="string" type="text" name="string" value="Hello World!"><br>
-      <button onclick="onSubmit()">Submit</button>
+      <button onclick="submit()">Submit</button>
     </form>
   </body>
 </html>
