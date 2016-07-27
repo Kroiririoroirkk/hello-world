@@ -31,16 +31,16 @@
         } else {
           return null;
         }
-      } 
-      function onSubmit() {
-        setCookie("string", document.getElementById("string").getAttribute("value"), 7);
-        changeBody();
       }
       function changeBody() {
         let cookie = checkCookie();
         if (cookie !== null) {
           $("body").eq(0).html(`<p>You entered ${cookie}!</p>`);
         }
+      }
+      function onSubmit() {
+        setCookie("string", document.getElementById("string").getAttribute("value"), 7);
+        changeBody();
       }
       $(document).ready(function(){
         changeBody();
@@ -50,7 +50,7 @@
   <body>
     <p>Enter something in, I guess.</p>
     <form id="form" name="field">
-      <input id="string" type="text" name="string" value=""><br>
+      <input id="string" type="text" name="string" value="Hello World!"><br>
       <input id="submit" type="button" onClick="onSubmit()" value="Submit">
     </form>
   </body>
