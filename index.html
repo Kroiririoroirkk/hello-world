@@ -35,7 +35,7 @@
       function changeBody() {
         var cookie = checkCookie();
         if (cookie !== null) {
-          document.body.innerHTML = `<p>You entered ${cookie}!</p>`;
+          document.body.appendChild(document.createTextNode(`<p>You entered ${cookie}!</p>`));
         }
       }
       function submit() {
