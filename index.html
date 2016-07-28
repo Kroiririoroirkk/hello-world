@@ -39,14 +39,14 @@
         }
       }
       function submit() {
-        setCookie("string", document.getElementById("string").getAttribute("value"), 7);
+        setCookie("string", document.getElementById("string").value, 7);
         changeBody();
       }
     </script>
   </head>
   <body onload="changeBody()">
     <p>Enter something in, I guess.</p>
-    <input id="string" type="text" name="string" value="Hello World!"><br>
+    <input id="string" type="text" name="string" placeholder="Hello World!"><br>
     <button onclick="submit()">Submit</button>
   </body>
 </html>
