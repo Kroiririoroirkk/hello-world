@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello world!</title>
+    <style>
+      body {
+        background-color: #e9fca3;
+      }
+      p {
+        font-family: normal normal 200 3em Palatino, "Courier New", Serif;
+      }
+      span {
+        color: red;
+      }
+    </style>
     <script>
       function setCookie(cname, cvalue, exdays) {
         var d = new Date();
@@ -40,7 +51,7 @@
       function changeBody() {
         var cookie = checkCookie();
         if (cookie !== null) {
-          document.body.innerHTML = "<div>" + escapeString(`You entered ${cookie}!`) + "</div>";
+          document.body.innerHTML = `<div>You entered <span>${escapeString(cookie)}</span>!</div>`;
         }
       }
       function submit() {
