@@ -32,10 +32,15 @@
           return null;
         }
       }
+      function escapeString(string) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+      }
       function changeBody() {
         var cookie = checkCookie();
         if (cookie !== null) {
-          document.body.appendChild(document.createTextNode(`<p>You entered ${cookie}!</p>`));
+          document.body.innerHTML = "<div>" + escapeString(`You entered ${cookie}!`) + "</div>";
         }
       }
       function submit() {
