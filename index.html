@@ -13,8 +13,8 @@
       function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i];
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
           while (c.charAt(0)==" ") {
             c = c.substring(1);
           }
@@ -25,7 +25,7 @@
         return "";
       }
       function checkCookie() {
-        let string = getCookie("string");
+        var string = getCookie("string");
         if (string!=="") {
           return string;
         } else {
@@ -33,7 +33,7 @@
         }
       }
       function changeBody() {
-        let cookie = checkCookie();
+        var cookie = checkCookie();
         if (cookie !== null) {
           $("body").eq(0).html(`<p>You entered ${cookie}!</p>`);
         }
@@ -49,9 +49,7 @@
   </head>
   <body onload="changeBody()">
     <p>Enter something in, I guess.</p>
-    <form id="form" name="field">
-      <input id="string" type="text" name="string" value="Hello World!"><br>
-      <button onclick="submit()">Submit</button>
-    </form>
+    <input id="string" type="text" name="string" value="Hello World!"><br>
+    <button onclick="submit()">Submit</button>
   </body>
 </html>
