@@ -35,15 +35,12 @@
       function changeBody() {
         var cookie = checkCookie();
         if (cookie !== null) {
-          $("body").eq(0).html(`<p>You entered ${cookie}!</p>`);
+          document.body.innerHTML = `<p>You entered ${cookie}!</p>`;
         }
-        alert("I was called!");
       }
       function submit() {
         setCookie("string", document.getElementById("string").getAttribute("value"), 7);
         changeBody();
-        console.log("I was clicked!");
-        alert("I was clicked!");
       }
     </script>
   </head>
